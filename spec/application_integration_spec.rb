@@ -10,7 +10,10 @@ describe "GET '/' - Greeting Form" do
   # New test
   it 'has a greeting form with a user_name field' do
     visit '/'
-
+#page has an HTML selector for "form"
+#page contains an HTML element that matches form tag
+#have_selector comes from Capybara gem
+#asking page object "hey do you have HTML that matches the following selector?"
     expect(page).to have_selector("form")
     expect(page).to have_field(:user_name)
   end
